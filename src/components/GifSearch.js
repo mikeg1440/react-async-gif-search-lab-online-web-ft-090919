@@ -22,12 +22,14 @@ export default class GifSearch extends Component{
 
   render(){
     return (
-      <form onSubmit={this.handleSubmit} >
-        <label>Search for Gifs using a keyword</label>
-        <input type='text' value={this.state.query} onChange={this.handleChange} />
+      <div class='container'>
+        <form onSubmit={this.handleSubmit} class='form-group'>
+          <label>Search for Gifs using a keyword</label>
+          <input type='text' value={this.state.query} onChange={this.handleChange} style={{width: '50%'}} class='form-control'/>
 
-        <input type='submit' value='Search Gifs' />
-      </form>
+          <input type='submit' value='Search Gifs' class='btn btn-primary'/>
+        </form>
+      </div>
     )
   }
 }
